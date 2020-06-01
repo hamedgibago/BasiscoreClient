@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+    "typescript": "3.8.1-rc",
+    "gulp": "4.0.2",
+    "gulp-concat": "2.6.1",
+    "gulp-jsmin": "0.1.5",
+    "gulp-watch": "5.0.1",
+    "gulp-batch": "1.0.5",
+    "gulp-deporder": "1.2.0",
+    "alasql": "0.5.5"
+  }
+}

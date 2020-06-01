@@ -1,0 +1,74 @@
+﻿<style>
+    td {
+        border-color: black;
+        border-width: 1px;
+        border-style: solid;
+    }
+</style>
+<basis core="list" run='atclient' datamembername="project.list">
+    <layout>
+        <script type="text/template">
+            <table class="testtt">@child</table>
+        </script>
+    </layout>
+
+    <face>
+        <script type="text/template">
+            <tr>
+                <td>
+                    <div class="item ">
+                        <div class="PrjItem" onclick="doHrefAction('titlein')">
+                            <div class="image">
+                                <img src="http://cdn.basiscore.net/cms.eshel-ir.com/@00385X00297prp" alt="@title" title="@title" />
+                            </div>
+                            <a href="/@link" class="titlein" data-limitedtext="50">@title</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </script>
+    </face>
+
+</basis>
+
+<basis core="dbsource" run='atclient' source="basiscoreapi" name="project" mid="19" lid="1" catid="46861">
+    <member name="list" type="list" order="id desc" pageno="1" sort="ord" size="385X297" link="project.bc" perpage="6" preview="" />
+</basis>
+
+
+
+<script>
+    var host = {
+        Debug: true,
+        OnRendered: onRendered,
+        OnCallExecuted: onCallExecuted,
+        OnRendering: onRendering,
+        Settings: {
+            'connection.web.callcommand': 'http://localhost:5000/call.html',
+            'connection.web.basiscoreapi': 'http://dbsource.basiscore.net/data.json',
+            'default.dbsource.verb': 'post',
+            'default.call.verb': 'post',
+            'default.dmnid': '4317',
+            'default.ViewCommand.GroupColumn': 'prpid',
+            'demo_basiscoreapi': 'http://dbsource.basiscore.net',
+
+        }
+    }
+
+    function onRendered() {
+
+    }
+
+    function onCallExecuted() {
+        console.log('OnCallExecuted');
+    }
+
+    function onRendering() {
+
+
+    }
+</script>
+
+<script src="http://cdn.basiscore.net/_js/alasql.min.js"></script>
+<script src="http://cdn.basiscore.net/_js/basiscore.min.js"></script>
+

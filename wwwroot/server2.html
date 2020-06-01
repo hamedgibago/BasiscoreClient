@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        td {
+            border-color: black;
+            border-width: 1px;
+            border-style: solid;
+        }
+    </style>
+    <script>
+        var host = {
+            Debug: true,
+            Settings: {
+                'connection.web.callcommand': 'http://localhost:5000/call.html',
+                'connection.web.basiscoreapi': 'http://185.44.36.122:8080/data.json',
+                'default.dbsource.verb': 'post',
+                'default.call.verb': 'post',
+                'default.dmnid': '4317',
+                'default.ViewCommand.GroupColumn': 'prpid',
+                'demo_basiscoreapi': 'http://185.44.36.122:8080',
+
+            }
+        }
+    </script>
+</head>
+<body>
+
+
+
+    <basis core="dbsource" run='atclient' source="basiscoreapi" name="menu" lid="1" mid="20">
+        <member request="cat" type="tree" name="a" parentid="14684" preview="" />
+    </basis>
+
+    <basis core="tree" run='atclient' datamembername="menu.a" idcol="catid" parentidcol="parentid" NullValue="0">
+        <layout>
+            <script type="text/template">
+                <ul class="testtt">@child</ul>
+            </script>
+        </layout>
+
+        <face>
+            <script type="text/template">
+                <li>
+                    @title
+                    <ul>@child</ul>
+                </li>
+            </script>
+        </face>
+
+    </basis>
+
+
+
+    <script src="alasql.min.js"></script>
+    <script src="basiscore.min.js"></script>
+</body>
+</html>

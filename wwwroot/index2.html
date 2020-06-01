@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+    
+    <script>
+        var host = {
+            Debug: true,
+            OnRendered: onRendered,
+            OnCallExecuted: onCallExecuted,
+            OnRendering: onRendering,
+            Settings: {
+                'connection.web.callcommand':'http://localhost:5000/',
+                'connection.web.basiscore': 'http://localhost:5000/data.json',
+
+                'default.dbsource.verb': 'get',
+                'default.call.verb':'get',
+                'default.dmnid': '4312'
+            }
+        }
+
+        function onRendered() {
+            console.log('OnRendered');
+        }
+        function onCallExecuted() {
+            console.log('OnCallExecuted');
+        }
+        function onRendering() {
+            console.log('OnRendering');
+        }
+    </script>
+</head>
+<body>
+    [##cms.query.id##]
+    <div>
+        [##cms.query.id##]
+    </div>
+    <p data-app="[##cms.p.l##]" name="fff" class="book [##cms.p.l##] or [##cms.p.l6##]"></p>
+
+    <basis core='dbsource' source='basiscore' name='serverdata' mid='20' lid='1' run="atclient">
+        <member type='list' name='view' order='ord asc' />
+        <member type='list' name='tree' order='ord asc' />
+        <member type='list' name='print' order='ord asc' preview='True' />
+    </basis>
+
+    <script src="alasql.min.js"></script>
+    <script src="basiscore.min.js"></script>
+
+    <script>
+            //var root = document.querySelector('*'),
+            //    iter = document.createNodeIterator(root, NodeFilter.SHOW_TEXT),
+            //    textnode;
+
+            //// print all text nodes
+            //while (textnode = iter.nextNode()) {
+            //    if (textnode.textContent.trim().length > 0) {
+            //        console.log(textnode.nodeName, textnode.textContent);
+            //    }
+            //}
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+console.log("%cWelcome To BasisCore Ecosystem\n%c follow us on https://BasisCore.com/\nversion:1.0.20", " background: yellow;color: #0078C1; font-size: 2rem; font-family: Arial; font-weight: bolder", "color: #0078C1; font-size: .73rem; font-family: Arial;");

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script>
+        var host = {
+            Settings: {
+                'demo_basiscoreapi': 'http://185.44.36.122:8080',
+                'default.dbsource.verb': 'post',
+                'default.dmnid': '4'
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+
+    <basis core="view" datamembername="db.product" run="atclient" groupcol="Question">
+        <face level="1">
+            <div class="row">
+                <span> @Question : </span>
+                @child
+            </div>
+            </br>
+        </face>
+        <face level="2">
+            <span> @Answer , </span>
+        </face>
+    </basis>
+
+
+
+    <basis core='dbsource' source='demo_basiscoreapi' name='db' mid='20' lid='1' usedforid='1377033' userid='122504' ownerid='6' rkey='289979947718473-59625461925771' dmnid='22' if='false' run='atclient'>
+        <member type='view' name='product' order='ord asc' preview=''></member>
+    </basis>
+
+
+    <script src="alasql.min.js"></script>
+    <script src="basiscore.min.js"></script>
+</body>
+</html>

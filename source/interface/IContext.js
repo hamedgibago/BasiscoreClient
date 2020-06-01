@@ -1,0 +1,1 @@
+//requires: interface/IHostSetting.js

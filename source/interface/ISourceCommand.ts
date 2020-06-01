@@ -1,0 +1,2 @@
+﻿interface ISourceCommand extends ICommand {
+}

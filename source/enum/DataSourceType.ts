@@ -1,0 +1,4 @@
+﻿enum DataSourceType {
+    Table,
+    Json
+}
