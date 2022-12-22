@@ -10,6 +10,6 @@
     "gulp-watch": "5.0.1",
     "gulp-batch": "1.0.5",
     "gulp-deporder": "1.2.0",
-    "alasql": "0.5.5"
+    "alasql": "2.2.4"
   }
 }
